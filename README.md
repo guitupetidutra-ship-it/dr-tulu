@@ -19,3 +19,9 @@ This repository contains two main components:
 - **[`rl/`](rl/)**: RL training code based on [Open-Instruct](https://github.com/allenai/open-instruct) for training deep research agents with GRPO and evolving rubrics.
 
 For detailed setup and usage instructions, see the README files in each subdirectory.
+
+---
+
+## Acknowledgments
+
+DR Tulu is provided by The Allen Institute for Artificial Intelligence (Ai2). The code for this project is developed in collaboration with student researchers at the University of Washington, Carnegie Mellon University, and MIT.
