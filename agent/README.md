@@ -125,3 +125,36 @@ Examples:
   # Custom config file
   python scripts/launch_chat.py --config workflows/auto_search_sft.yaml
 ```
+
+## Evaluation
+
+### SQA-CS-V2
+
+1. SQA-CS-V2 requires a response to be in a json format as below:
+
+```json
+{
+  "sections": [
+    {
+      "text": "text of section 1",
+      "citations": {
+        "id": "cite 1 of sec 1",
+        "snippets": [
+          "evidence 1",
+          "evidence 2"
+        ]
+      }
+    },
+    {
+      "text": "text of section 2",
+      "citations": {
+        "id": "cite 1 of sec 2",
+        "snippets": [
+          "List of evidence"
+        ]
+      }
+    }
+  ]
+}
+```
+The following command can be used to convert the output of DR Tulu models: python evaluation/sqa_eval/convert_to_asta_format.py --folder <folder_name> --file <file_name>
